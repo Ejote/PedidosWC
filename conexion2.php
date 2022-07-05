@@ -1,9 +1,9 @@
 <?php
-
+header('Content-Type: application/json; charset=utf-8');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // fetch RAW input
-    $json = file_get_contents('php://input');
+   // $json = file_get_contents('php://input');
 
     // decode json
     $object = json_decode($json);
@@ -24,15 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     file_put_contents('respuesta.json', print_r($object, true));
     
   
-    $leerarchivo = fopen('callback.txt', 'r')
-    or die ("No puedo abrirlo bro");
 
-    while (!feof ($leerarchivo))
-    {
-        $vengase = fgets ($leerarchivo);
-        $salto = nl2br ($vengase);
-        echo $salto;
-    }
   
    
     
