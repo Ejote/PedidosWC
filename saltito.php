@@ -1,6 +1,7 @@
 <?
+echo ("--- Aquí empieza la orden ---")
 $leerarchivo = fopen('callback.txt', "r")
-    or die ("No puedo abrirlo bro");
+    or die ("No puedo abrirlo, bro");
 
     while (!feof ($leerarchivo))
     {
@@ -8,5 +9,9 @@ $leerarchivo = fopen('callback.txt', "r")
         $salto = nL2br ($vengase);
         echo $salto;
     }
-    echo ("estás ashí?");
+    echo ("----Aquí termina una orden ----");
+
+
+
+
 ?>

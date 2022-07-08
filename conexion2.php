@@ -3,7 +3,7 @@ header('Content-Type: application/json; charset=utf-8');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // fetch RAW input
-   // $json = file_get_contents('php://input');
+   $json = file_get_contents('php://input');
 
     // decode json
     $object = json_decode($json);
@@ -22,14 +22,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // dump to file so you can see
     file_put_contents('callback.txt', print_r($object, true));
     file_put_contents('respuesta.json', print_r($object, true));
-    
-  
 
-  
+    print_r ($object);
+      
+    $Nombre = $object->billing->first_name;
+    $Nombre2 = $object ["Billing"]["first_name"];
+
    
-    
- 
-
     /*function direccion ($datosenvio)
     {
         
