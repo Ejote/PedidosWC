@@ -23,11 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     file_put_contents('callback.txt', print_r($object, true));
     file_put_contents('respuesta.json', print_r($object, true));
 
-    print_r ($object);
-      
-    $Nombre = $object->billing->first_name;
-    $Nombre2 = $object ["Billing"]["first_name"];
-
+    $data = file_get_contents ('respuesta.json');
+        $jsontwo = json_encode($data, true);
+        $Nombre = $jsontwo ['billing']['first_name'];
    
     /*function direccion ($datosenvio)
     {

@@ -1,5 +1,6 @@
 <?
-echo ("--- Aquí empieza la orden ---")
+echo ("--- Aquí empieza la orden ---");
+
 $leerarchivo = fopen('callback.txt', "r")
     or die ("No puedo abrirlo, bro");
 
