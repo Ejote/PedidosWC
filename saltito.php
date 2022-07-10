@@ -10,9 +10,15 @@ $leerarchivo = fopen('callback.txt', "r")
         $salto = nL2br ($vengase);
         echo $salto;
     }
+<<<<<<< HEAD
+    echo ("estás ashí?");
+
+    []
+=======
     echo ("----Aquí termina una orden ----");
 
 
 
 
+>>>>>>> c27a76fb9dadef3ce034ad41a5a34d79aa6bcf35
 ?>
