@@ -15,11 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     /**
-     * Do something with object, structure will be like:
+     * Si te responde un objecto, accede así:
      * $object->accountId
      * $object->details->items[0]['contactName']
      */
-    // dump to file so you can see
+    // Para ver la respuesta usa var_dump
 
 $nombre = $object [billing][first_name];
 $apellido = $object [billing][last_name];
@@ -35,11 +35,13 @@ $cantidad = $object [line_items][0][quantity];
 $completa = [$nombre, $apellido, $direccion, $direccion2, $ciudad, $estado, $cp, $pais];
 $contador = 0;
 
+    /* Por si requieres guardar las respuestas de cada respuesta webhook */
+    
 file_put_contents('pruebadatos.json', print_r($completa, true));
     file_put_contents('callback.txt', print_r($object, true));
     file_put_contents('respuesta.json', print_r($object, true));
 
-<<<<<<< HEAD
+
     $datos = '<data>
     <Usuario>xxxx</Usuario>
     <Contrasena>xxxxx</Contrasena>
@@ -91,7 +93,7 @@ file_put_contents('pruebadatos.json', print_r($completa, true));
    
     /*function direccion ($datosenvio)
     {
->>>>>>> c27a76fb9dadef3ce034ad41a5a34d79aa6bcf35
+
         
     
     
